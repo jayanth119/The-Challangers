@@ -47,6 +47,7 @@ class VideoProcessor:
 
         video_cap.release()
         cv2.destroyAllWindows()
+        return frame_list
     
     def _save_frames(self, frame_list, current_sec):
         """
