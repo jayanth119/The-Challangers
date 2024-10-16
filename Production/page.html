@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <style>
-        * {
+       * {
             font-family: 'Press Start 2P', cursive;
         }
         body {
@@ -48,13 +48,18 @@
             text-align: center;
         }
         #subtitles {
-            padding: 10px;
-            background: #1a1a1a;
-            color: yellow;
-            font-size: 16px;
-            text-align: center;
-            position: relative; /* Enable positioning of floating text */
-        }
+    padding: 20px 15px;  /* Increase padding to give more space */
+    background: #1a1a1a;
+    color: yellow;
+    font-size: 20px;  /* Increase font size for better visibility */
+    text-align: center;
+    position: relative; /* Enable positioning of floating text */
+    min-height: 80px;  /* Ensure space for larger text */
+    max-height: 150px;  /* Set a limit to avoid overflowing */
+    overflow-y: auto;  /* Add scrolling if the text is too long */
+    border-radius: 10px; /* Optional: make it look smoother */
+}
+
         .floating-text {
             display: inline-block; /* Allow text to float independently */
             animation: float 2s ease-in-out infinite; /* Add floating animation */
@@ -203,17 +208,12 @@
         let captionInterval; // Variable to hold the interval ID
 
         // Array of random captions
-        const captions = [
-            "Welcome to the video!",
-            "Enjoy the show!",
-            "Stay tuned for more!",
-            "What do you think?",
-            "This is interesting!",
-            "Don't miss this part!",
-            "Have you ever seen this?",
-            "Feel free to ask questions!",
-            "Did you know this?",
-            "What a fantastic view!"
+        const captions = 
+        ['This image shows a busy urban street scene. Multiple lanes are visible, filled with cars, motorcycles, and other forms of public transportation such as buses and trucks. There is a mix of older and newer vehicles, with a significant number of commercial vehicles including trucks and buses. Pedestrians can be seen crossing the streets or walking along the sidewalks. The image includes overhead markings, road signs, and traffic lights. The street is flanked by buildings and there is greenery around the area. The date and time stamp at the top of the image indicate it was taken on Tuesday, December 12, 2023, at 15:45:49.',
+ 'The image depicts a street scene in a city, captured by a security camera. The timestamp indicates the date as December 12, 2023, at 3:47 PM. The location is Krishna Kanthi Nethaji Bridge, according to the text in the image. \n\nThe road is divided into several lanes for vehicular traffic. On the left side of the image, there is a sidewalk with pedestrians walking. The sidewalk appears crowded, with people possibly waiting at a bus stop or a crossing point. Several motorcycles and cars are also visible, creating a bustling atmosphere.\n\nOn the right side of the image, traffic flows in two directions. The rightmost lane is occupied by a yellow public transport bus heading towards the top of the image. A white truck is also visible, transporting goods. In the background, additional public transport vehicles, cars, and motorcycles fill the scene, indicating dense traffic typical of a busy city.\n\nThere are pedestrians on the left sidewalk, and the greenery and urban infrastructure are in sight. Buildings, utility poles, and street vendors add to the urban fabric.',
+ 'The image shows a busy urban street scene captured on December 12, 2023, at 3:47 PM during the afternoon hours, as indicated by the timestamp. The street, named Krishnabai Kamal Wari Bridge, is bustling with a variety of vehicles and motorcycles, with a mix of cars, trucks, motorbikes, and buses visible. On the roads, several trucks carrying cargo are prominent, alongside cars and buses. There are people walking and waiting by the roadside, and the area appears to be part of a commercial street with shops and businesses visible in the background. Signs and billboards are also present, indicating a dynamic and active commercial district.',
+ 'The image depicts a busy highway around Krishnapura Cantt, Krishnapura, on a weekday. Traffic is heavy, with numerous cars, motorcycles, bicycles, and buses visible. The time is 12:12 on Tuesday, and the date is December 12, 2023. There are construction barriers on the right side of the road, indicating ongoing work or maintenance. A variety of vehicles, including private cars, commercial trucks, and motorcycles, are navigating the dense traffic. Trees and some greenery are visible along the sides of the road, adding to the urban scenery.',
+ 'The image portrays a busy street scene in what appears to be part of the city of Krishnapura, Kanksha Bridge, on November 12, 2023, at 15:40. The street is bustling with vehicles and people, suggesting a busy moment on an urban road. The major vehicles include trucks, cars, motorcycles, and auto-rickshaws. On the left side of the road, pedestrian activity is evident with people walking and cycling. A truck is being turned around, which is causing some congestion. Further down the road, a large truck and multiple other vehicles are visible, indicating possible significant local or regional highway traffic.'
         ];
 
         // Function to load the video
@@ -283,7 +283,7 @@
 
         function stopCaptions() {
             clearInterval(captionInterval); // Clear the interval to stop captions
-            document.getElementById('captionText').textContent = ""; // Clear captions when video ends
+            // document.getElementById('captionText').textContent = ""; // Clear captions when video ends
         }
     </script>
 
