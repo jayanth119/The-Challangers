@@ -7,6 +7,11 @@
 
 Welcome to the **Video GPT** repository. This project focuses on video caption generation using advanced models and techniques to process videos efficiently. Our system is built to handle large video files by reducing and eliminating redundant frames, leveraging models like **InternV2**, and generating summarized text from the remaining frames.
 
+## Demo Link
+You can access the prototype of Video GPT project here : [Demo Link](https://jayanth119.github.io/The-Challangers/) 
+### Prototype 
+![Prototype](assests/prototype.jpg)
+
 ## Project Structure
 
 The repository is organized into the following main folders:
@@ -30,6 +35,8 @@ The repository is organized into the following main folders:
 - **InternV2 Model**: Utilizes the InternV2 model for redundant frame analysis and processing.
 - **Text Summarization**: Automatically generates text summaries from the optimized video frames.
 
+## Frame Reduction Idea Summary
+![Idea Summarization](assests/demo-3.gif)
 
 ```
 video-gpt/
@@ -45,9 +52,10 @@ video-gpt/
 │   
 ├── research/
 │   ├── models_experiments/               # Research files and model experiments
-│   
+│  
 ├── requirements.txt                      # Python dependencies
-│
+|
+├── index.html                            # Web Interface
 │
 ├── README.md                             # Project README file
 │
